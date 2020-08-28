@@ -393,7 +393,7 @@ void Object::BuildMovementUpdate(ByteBuffer* data, uint16 flags) const
     data->WriteBit(0);
     data->WriteBit(flags & UPDATEFLAG_SELF);                  // 680  UPDATEFLAG_SELF                    // OLD
     data->WriteBit(flags & UPDATEFLAG_HAS_TARGET);            // 464  UPDATEFLAG_HAS_TARGET              // OLD
-    data->WriteBit(0);                                        // 1032 UPDATEFLAG_SCENE_OBJECT            // NEW
+    data->WriteBit(flags & UPDATEFLAG_SCENE_OBJECT);          // 1032 UPDATEFLAG_SCENE_OBJECT            // NEW
     data->WriteBit(0);                                        // 1064 UPDATEFLAG_SCENE_PENDING_INSTANCES // NEW
     data->WriteBit(0);
     data->WriteBit(0);                                        // 668  UPDATEFLAG_HAS_AREATRIGGER         // NEW

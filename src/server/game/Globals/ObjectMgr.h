@@ -1439,6 +1439,7 @@ class ObjectMgr
         uint32 _hiCorpseGuid;
         uint32 _hiAreaTriggerGuid;
         uint32 _hiMoTransGuid;
+        uint32 _hiSceneGuid;
         uint32 m_battlePetId;
 
         QuestMap _questTemplates;

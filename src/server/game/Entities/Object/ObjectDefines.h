@@ -38,7 +38,8 @@ enum HighGuid
     HIGHGUID_BATTLEGROUND   = 0x1F1,                       // new 4.x
     HIGHGUID_MO_TRANSPORT   = 0x1FC,                       // blizz 1FC0 (for GAMEOBJECT_TYPE_MO_TRANSPORT)
     HIGHGUID_GROUP          = 0x1F5,
-    HIGHGUID_GUILD          = 0x1FF                        // new 4.x
+    HIGHGUID_GUILD          = 0x1FF,                       // new 4.x
+    HIGHGUID_SCENEOBJECT    = 0x1F2  // custom... need check packet
 };
 
 // used for creating values for respawn for example
@@ -67,6 +68,7 @@ inline bool IS_TRANSPORT_GUID(uint64 guid);
 inline bool IS_MO_TRANSPORT_GUID(uint64 guid);
 inline bool IS_GROUP_GUID(uint64 guid);
 inline bool IS_AREATRIGGER_GUID(uint64 guid);
+inline bool IS_SCENE_GUID(uint64 guid);
 
 // l - OBJECT_FIELD_GUID
 // e - OBJECT_FIELD_ENTRY_ID for GO (except GAMEOBJECT_TYPE_MO_TRANSPORT) and creatures or UNIT_FIELD_PET_NUMBER for pets

@@ -6201,6 +6201,11 @@ uint32 ObjectMgr::GenerateLowGuid(HighGuid guidhigh)
             ASSERT(_hiMoTransGuid < 0xFFFFFFFE && "MO Transport guid overflow!");
             return _hiMoTransGuid++;
         }
+        case HIGHGUID_SCENEOBJECT:
+        {
+            ASSERT(_hiSceneGuid < 0xFFFFFFFE && "SceneObject guid overflow!");
+            return _hiSceneGuid++;
+        }
         default:
             ASSERT(false && "ObjectMgr::GenerateLowGuid - Unknown HIGHGUID type");
             return 0;
